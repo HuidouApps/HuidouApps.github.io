@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - HuidouApps</title>
+  <link rel="icon" href="assets/dev_huidou.jpg">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%236C5CE7'/><text x='32' y='44' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>H</text></svg>">
+
   <style>
     .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5rem; align-items: start; }
     @media (max-width: 800px) { .contact-grid { grid-template-columns: 1fr; } }
@@ -76,7 +77,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="logo">
-        <span class="logo-icon">H</span>
+        <img src="assets/dev_huidou.jpg" alt="HuidouApps" class="logo-icon">
         HuidouApps
       </a>
       <nav>
@@ -92,7 +93,7 @@
 
   <section class="page-hero">
     <h1 class="fade-in">Get in Touch</h1>
-    <p class="fade-in">有问题、建议或想参与贡献？我们很乐意听到你的声音。</p>
+    <p class="fade-in">Have questions, suggestions, or want to contribute? We'd love to hear from you.</p>
   </section>
 
   <section class="section" style="padding-top: 0;">
@@ -100,45 +101,45 @@
       <div class="contact-grid">
 
         <div class="card fade-in">
-          <h2 style="margin-bottom: 1.25rem;">发送消息</h2>
+          <h2 style="margin-bottom: 1.25rem;">Send a Message</h2>
           <form class="contact-form" action="#" method="POST">
             <div class="form-group">
-              <label for="name">姓名</label>
-              <input type="text" id="name" name="name" placeholder="你的名字" required>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
             </div>
             <div class="form-group">
-              <label for="email">邮箱</label>
+              <label for="email">Email</label>
               <input type="email" id="email" name="email" placeholder="your@email.com" required>
             </div>
             <div class="form-group">
-              <label for="topic">主题</label>
+              <label for="topic">Topic</label>
               <select id="topic" name="topic">
-                <option value="">请选择主题</option>
-                <option value="bug">报告 Bug</option>
-                <option value="feature">功能建议</option>
-                <option value="contribute">参与贡献</option>
-                <option value="other">其他</option>
+                <option value="">Select a topic</option>
+                <option value="bug">Report Bug</option>
+                <option value="feature">Feature Request</option>
+                <option value="contribute">Contribute</option>
+                <option value="other">Other</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="message">消息</label>
-              <textarea id="message" name="message" placeholder="写下你想说的话..." required></textarea>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" style="align-self: flex-start;">发送消息</button>
+            <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Send Message</button>
           </form>
         </div>
 
         <div class="contact-info-side fade-in">
-          <h2 style="margin-bottom: 0.5rem;">联系方式</h2>
+          <h2 style="margin-bottom: 0.5rem;">Contact Info</h2>
           <p style="color: var(--text-secondary); margin-bottom: 1.25rem; font-size: 0.93rem;">
-            你可以通过以下方式找到我们，我们会在 48 小时内回复。
+            You can reach us through the following ways. We'll respond within 48 hours.
           </p>
 
           <div class="contact-info-card">
             <div class="info-dot purple">@</div>
             <div>
               <strong style="display: block; font-size: 0.88rem;">Email</strong>
-              <span style="color: var(--text-secondary); font-size: 0.88rem;">huidouapps@github.io</span>
+              <span style="color: var(--text-secondary); font-size: 0.88rem;">doudou@huidou.fun</span>
             </div>
           </div>
 
@@ -150,20 +151,11 @@
             </div>
           </div>
 
-          <div class="contact-info-card">
-            <div class="info-dot pink">DC</div>
-            <div>
-              <strong style="display: block; font-size: 0.88rem;">Discord</strong>
-              <span style="color: var(--text-secondary); font-size: 0.88rem;">加入我们的 Discord 社区</span>
-            </div>
-          </div>
-
           <div style="margin-top: 0.75rem;">
-            <strong style="display: block; font-size: 0.88rem; margin-bottom: 0.6rem;">关注我们</strong>
+            <strong style="display: block; font-size: 0.88rem; margin-bottom: 0.6rem;">Follow Us</strong>
             <div class="social-links">
               <a href="https://github.com/HuidouApps" target="_blank" rel="noopener" class="social-link gh">GitHub</a>
-              <a href="#" class="social-link dc">Discord</a>
-              <a href="mailto:huidouapps@github.io" class="social-link em">Email</a>
+              <a href="mailto:doudou@huidou.fun" class="social-link em">Email</a>
             </div>
           </div>
         </div>
@@ -172,38 +164,16 @@
     </div>
   </section>
 
-  <section class="section" style="padding-top: 0;">
-    <div class="container">
-      <h2 class="section-title fade-in" style="margin-bottom: 2rem;">常见问题</h2>
-      <div class="card fade-in" style="max-width: 650px; margin: 0 auto;">
-        <div class="faq-item">
-          <h3>如何参与 HuidouApps 的项目贡献？</h3>
-          <p>Fork 你感兴趣的项目，阅读 CONTRIBUTING.md，提交 PR 即可。我们鼓励任何形式的贡献。</p>
-        </div>
-        <div class="faq-item">
-          <h3>项目使用什么开源协议？</h3>
-          <p>大部分项目使用 MIT License。部分特殊项目可能使用 Apache 2.0 或 GPL，请查看各项目仓库。</p>
-        </div>
-        <div class="faq-item">
-          <h3>可以在商业项目中使用你们的代码吗？</h3>
-          <p>MIT 协议的项目可以自由在商业项目中使用，但请保留版权声明。具体请参阅对应项目的 LICENSE 文件。</p>
-        </div>
-        <div class="faq-item">
-          <h3>如何报告安全漏洞？</h3>
-          <p>请勿公开提交安全漏洞。请通过 Email 私下联系，我们会在确认后及时修复并发布公告。</p>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
         <h3>HuidouApps</h3>
-        <p>Build with joy, ship with pride. 一个充满热情的开源组织。</p>
+        <p>Build with joy, ship with pride.</p>
       </div>
       <div class="footer-links">
-        <h4>导航</h4>
+        <h4>Navigation</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="projects.html">Projects</a></li>
@@ -212,7 +182,7 @@
         </ul>
       </div>
       <div class="footer-links">
-        <h4>链接</h4>
+        <h4>Links</h4>
         <ul>
           <li><a href="https://github.com/HuidouApps" target="_blank" rel="noopener">GitHub</a></li>
         </ul>
