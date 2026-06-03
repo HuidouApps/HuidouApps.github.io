@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - HuidouApps</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%236C5CE7'/><text x='32' y='44' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>H</text></svg>">
+  <style>
+    .about-story { max-width: 750px; margin: 0 auto; text-align: center; }
+    .about-story p { font-size: 1.08rem; color: var(--text-secondary); line-height: 1.9; margin-bottom: 1.25rem; }
+
+    .timeline { max-width: 650px; margin: 0 auto; position: relative; padding-left: 2.5rem; }
+    .timeline::before {
+      content: ''; position: absolute; left: 10px; top: 0; bottom: 0;
+      width: 3px; background: linear-gradient(to bottom, var(--primary), var(--accent-1), var(--accent-3));
+      border-radius: 2px;
+    }
+    .timeline-item { position: relative; margin-bottom: 2rem; }
+    .timeline-dot {
+      position: absolute; left: -2.5rem; top: 4px;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: #fff; border: 4px solid var(--primary);
+      box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.10);
+    }
+    .timeline-dot.c1 { border-color: var(--primary); }
+    .timeline-dot.c2 { border-color: var(--secondary); box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.10); }
+    .timeline-dot.c3 { border-color: var(--accent-1); box-shadow: 0 0 0 4px rgba(0, 206, 201, 0.10); }
+    .timeline-dot.c4 { border-color: var(--accent-3); box-shadow: 0 0 0 4px rgba(253, 121, 168, 0.10); }
+    .timeline-date { font-size: 0.82rem; font-weight: 700; color: var(--primary); margin-bottom: 0.2rem; }
+    .timeline-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .timeline-desc { color: var(--text-secondary); font-size: 0.93rem; }
+
+    .value-card { text-align: center; padding: 2rem 1.5rem; }
+    .value-card h3 { margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+
+  <div class="bg-bubbles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">H</span>
+        HuidouApps
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <h1 class="fade-in">About Us</h1>
+    <p class="fade-in">了解 HuidouApps 的故事、愿景与价值观。</p>
+  </section>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="about-story fade-in">
+        <h2 class="section-title" style="margin-bottom: 1.75rem;">我们的故事</h2>
+        <p>
+          HuidouApps 诞生于一群开发者对开源的热爱。我们相信，优秀的软件工具应该对所有人开放，
+          无论你身处何地、经验几何——都应当拥有改变世界的能力。
+        </p>
+        <p>
+          从最初几个零散的个人项目开始，我们逐渐汇聚成一个紧密协作的团队。
+          每一个项目都承载着我们对代码品质的执着和对用户需求的深刻理解。
+        </p>
+        <p>
+          今天，HuidouApps 已经发展成为涵盖前端工具、CLI 应用、数据处理和基础设施
+          等多个领域的开源组织。但我们的初心从未改变——<strong>Build with Joy, Ship with Pride.</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <h2 class="section-title fade-in" style="margin-bottom: 0.5rem;">我们的价值观</h2>
+      <p class="section-subtitle fade-in">驱动我们前行的核心理念</p>
+      <div class="grid-3">
+        <div class="card value-card fade-in">
+          <h3 style="color: var(--primary);">品质至上</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">我们追求代码的优雅和可靠，每一行代码都经过深思熟虑。</p>
+        </div>
+        <div class="card value-card fade-in">
+          <h3 style="color: var(--secondary);">开放协作</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">透明、包容的协作方式，让每个人都能参与并贡献自己的力量。</p>
+        </div>
+        <div class="card value-card fade-in">
+          <h3 style="color: var(--accent-1);">持续创新</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">拥抱变化，不断探索新技术，为用户带来更有价值的解决方案。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <h2 class="section-title fade-in" style="margin-bottom: 2.5rem;">里程碑</h2>
+      <div class="timeline fade-in">
+        <div class="timeline-item">
+          <div class="timeline-dot c1"></div>
+          <div class="timeline-date">2023 Q1</div>
+          <div class="timeline-title">组织成立</div>
+          <div class="timeline-desc">HuidouApps 正式在 GitHub 上成立，第一个项目发布。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot c2"></div>
+          <div class="timeline-date">2023 Q3</div>
+          <div class="timeline-title">首个 100 Stars</div>
+          <div class="timeline-desc">Awesome Toolkit 在社区中获得广泛认可，累计收获 100+ Stars。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot c3"></div>
+          <div class="timeline-date">2024 Q2</div>
+          <div class="timeline-title">全球化协作</div>
+          <div class="timeline-desc">迎来首批国际贡献者，项目文档全面支持中英文双语。</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot c4"></div>
+          <div class="timeline-date">2025 Q4</div>
+          <div class="timeline-title">10+ 活跃项目</div>
+          <div class="timeline-desc">组织项目数量突破 10 个，覆盖多个技术领域，社区成员超过 50 人。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fade-in" style="text-align: center;">
+    <div class="container">
+      <div class="card" style="background: linear-gradient(135deg, var(--accent-3), #e84393); color: #fff; padding: 2.5rem 2rem;">
+        <h2 style="font-size: 1.7rem; margin-bottom: 0.75rem;">成为我们的一员</h2>
+        <p style="opacity: 0.9; margin-bottom: 1.75rem;">无论什么背景，HuidouApps 都欢迎你的加入。</p>
+        <a href="contact.html" class="btn btn-accent" style="background: #fff; color: var(--accent-3); box-shadow: 0 4px 18px rgba(0,0,0,0.12);">加入我们</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>HuidouApps</h3>
+        <p>Build with joy, ship with pride. 一个充满热情的开源组织。</p>
+      </div>
+      <div class="footer-links">
+        <h4>导航</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>链接</h4>
+        <ul>
+          <li><a href="https://github.com/HuidouApps" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 HuidouApps. Powered by the community.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

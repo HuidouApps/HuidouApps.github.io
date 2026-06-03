@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - HuidouApps</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%236C5CE7'/><text x='32' y='44' font-size='36' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>H</text></svg>">
+  <style>
+    .filter-bar {
+      display: flex; gap: 0.5rem; flex-wrap: wrap;
+      justify-content: center; margin-bottom: 2rem;
+    }
+    .filter-btn {
+      padding: 0.5rem 1.3rem; border-radius: 100px;
+      border: 2px solid rgba(108, 92, 231, 0.14);
+      background: var(--bg-card); font-weight: 600;
+      font-size: 0.88rem; color: var(--text-secondary);
+      cursor: pointer; transition: all var(--transition);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #fff; border-color: transparent;
+    }
+    .project-card { position: relative; overflow: hidden; }
+    .project-card::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 4px; height: 100%; border-radius: 4px 0 0 4px;
+    }
+    .project-card.lang-ts::before  { background: var(--primary); }
+    .project-card.lang-rs::before  { background: var(--secondary); }
+    .project-card.lang-py::before  { background: var(--accent-4); }
+    .project-card.lang-go::before  { background: var(--accent-1); }
+    .project-card.lang-js::before  { background: var(--accent-2); }
+    .project-card.lang-swift::before { background: var(--accent-3); }
+    .project-meta {
+      display: flex; gap: 1rem; color: var(--text-light);
+      font-size: 0.84rem; margin-top: 1rem; flex-wrap: wrap;
+    }
+    .lang-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      display: inline-block; margin-right: 0.3rem;
+    }
+    .lang-dot.ts { background: var(--primary); }
+    .lang-dot.rs { background: var(--secondary); }
+    .lang-dot.py { background: var(--accent-4); }
+    .lang-dot.go { background: var(--accent-1); }
+    .lang-dot.js { background: var(--accent-2); }
+    .lang-dot.swift { background: var(--accent-3); }
+  </style>
+</head>
+<body>
+
+  <div class="bg-bubbles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">H</span>
+        HuidouApps
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <h1 class="fade-in">Our Projects</h1>
+    <p class="fade-in">探索 HuidouApps 的所有开源项目，找到你感兴趣的工具和库。</p>
+  </section>
+
+  <div class="container fade-in" style="margin-bottom: 1.5rem;">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="ts">TypeScript</button>
+      <button class="filter-btn" data-filter="rs">Rust</button>
+      <button class="filter-btn" data-filter="py">Python</button>
+      <button class="filter-btn" data-filter="go">Go</button>
+      <button class="filter-btn" data-filter="js">JavaScript</button>
+      <button class="filter-btn" data-filter="swift">Swift</button>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="grid-2">
+
+        <div class="card project-card lang-ts fade-in" data-lang="ts">
+          <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+            <span class="badge badge-purple">TypeScript</span>
+            <span class="badge badge-teal">Active</span>
+          </div>
+          <h3 style="margin-bottom: 0.5rem;">Awesome Toolkit</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">高效的前端工具集，包含常用 Hooks、组件和实用函数。</p>
+          <div class="project-meta">
+            <span><span class="lang-dot ts"></span>TypeScript</span>
+            <span>Stars: 128</span><span>Forks: 32</span><span>Issues: 18</span>
+          </div>
+        </div>
+
+        <div class="card project-card lang-rs fade-in" data-lang="rs">
+          <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+            <span class="badge badge-red">Rust</span>
+            <span class="badge badge-teal">Active</span>
+          </div>
+          <h3 style="margin-bottom: 0.5rem;">Swift CLI</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">极速命令行工具，提供项目脚手架和自动化工作流。</p>
+          <div class="project-meta">
+            <span><span class="lang-dot rs"></span>Rust</span>
+            <span>Stars: 89</span><span>Forks: 15</span><span>Issues: 7</span>
+          </div>
+        </div>
+
+        <div class="card project-card lang-py fade-in" data-lang="py">
+          <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+            <span class="badge badge-blue">Python</span>
+            <span class="badge badge-yellow">Growing</span>
+          </div>
+          <h3 style="margin-bottom: 0.5rem;">DataViz Lite</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">轻量级数据可视化库，几行代码即可生成漂亮的图表和仪表盘。</p>
+          <div class="project-meta">
+            <span><span class="lang-dot py"></span>Python</span>
+            <span>Stars: 56</span><span>Forks: 10</span><span>Issues: 4</span>
+          </div>
+        </div>
+
+        <div class="card project-card lang-go fade-in" data-lang="go">
+          <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+            <span class="badge badge-pink">Go</span>
+            <span class="badge badge-teal">Active</span>
+          </div>
+          <h3 style="margin-bottom: 0.5rem;">MessageBus</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">高性能分布式消息中间件，为微服务架构提供可靠通信。</p>
+          <div class="project-meta">
+            <span><span class="lang-dot go"></span>Go</span>
+            <span>Stars: 103</span><span>Forks: 22</span><span>Issues: 11</span>
+          </div>
+        </div>
+
+        <div class="card project-card lang-js fade-in" data-lang="js">
+          <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+            <span class="badge badge-yellow">JavaScript</span>
+            <span class="badge badge-teal">Active</span>
+          </div>
+          <h3 style="margin-bottom: 0.5rem;">WebScaffold</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">现代 Web 项目脚手架，内置最佳实践和常用配置。</p>
+          <div class="project-meta">
+            <span><span class="lang-dot js"></span>JavaScript</span>
+            <span>Stars: 72</span><span>Forks: 18</span><span>Issues: 9</span>
+          </div>
+        </div>
+
+        <div class="card project-card lang-py fade-in" data-lang="py">
+          <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+            <span class="badge badge-blue">Python</span>
+            <span class="badge badge-teal">Active</span>
+          </div>
+          <h3 style="margin-bottom: 0.5rem;">APIForge</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">快速构建 RESTful API 的框架，自动生成文档和测试。</p>
+          <div class="project-meta">
+            <span><span class="lang-dot py"></span>Python</span>
+            <span>Stars: 91</span><span>Forks: 14</span><span>Issues: 6</span>
+          </div>
+        </div>
+
+        <div class="card project-card lang-swift fade-in" data-lang="swift">
+          <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+            <span class="badge badge-pink">Swift</span>
+            <span class="badge badge-yellow">Growing</span>
+          </div>
+          <h3 style="margin-bottom: 0.5rem;">MelodyKit</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">iOS/macOS 音频处理库，提供音乐可视化和音频特效。</p>
+          <div class="project-meta">
+            <span><span class="lang-dot swift"></span>Swift</span>
+            <span>Stars: 44</span><span>Forks: 8</span><span>Issues: 3</span>
+          </div>
+        </div>
+
+        <div class="card project-card lang-ts fade-in" data-lang="ts">
+          <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+            <span class="badge badge-purple">TypeScript</span>
+            <span class="badge badge-teal">Active</span>
+          </div>
+          <h3 style="margin-bottom: 0.5rem;">FormForge</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">声明式表单构建器，支持复杂验证、动态字段和多种 UI 框架。</p>
+          <div class="project-meta">
+            <span><span class="lang-dot ts"></span>TypeScript</span>
+            <span>Stars: 67</span><span>Forks: 20</span><span>Issues: 12</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section fade-in" style="text-align: center;">
+    <div class="container">
+      <div class="card" style="background: linear-gradient(135deg, var(--accent-1), #00b894); color: #fff; padding: 2.5rem 2rem;">
+        <h2 style="font-size: 1.7rem; margin-bottom: 0.75rem;">有好的项目想法？</h2>
+        <p style="opacity: 0.9; margin-bottom: 1.75rem;">欢迎提交 Issue 或 PR，一起打造更棒的工具。</p>
+        <a href="contact.html" class="btn btn-accent" style="background: #fff; color: var(--accent-1); box-shadow: 0 4px 18px rgba(0,0,0,0.12);">联系我们</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>HuidouApps</h3>
+        <p>Build with joy, ship with pride. 一个充满热情的开源组织。</p>
+      </div>
+      <div class="footer-links">
+        <h4>导航</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>链接</h4>
+        <ul>
+          <li><a href="https://github.com/HuidouApps" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 HuidouApps. Powered by the community.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.project-card[data-lang]').forEach(card => {
+          card.style.display = (filter === 'all' || card.dataset.lang === filter) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
